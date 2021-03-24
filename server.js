@@ -21,7 +21,7 @@ app.get('/api/grips/:albumName', (req, res)=>{
     }
 });
 
-app.listen(PORT, (err) => {
+app.listen(process.env.PORT || PORT, (err) => {
     if(err) console.log(err);
     console.log('Listening at ' + PORT);
 });
