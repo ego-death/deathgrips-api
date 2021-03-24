@@ -5,7 +5,7 @@ async function runAPI(){
     document.querySelector('#best').innerText = 'Best Track: ';
     document.querySelector('#worst').innerText = 'Worst Track: ';
     const album = document.querySelector('input').value;
-    const res = await fetch(`http://localhost:8000/api/grips/${album}`);
+    const res = await fetch(`https://deathgrips-api.herokuapp.com/api/grips/${album}`);
     const data = await res.json();
     console.log(data);
     document.querySelector('#rating').innerText += ' ' + data.rating;
