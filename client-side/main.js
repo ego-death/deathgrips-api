@@ -6,6 +6,7 @@ async function runAPI(){
     document.querySelector('#worst').innerText = 'Worst Track: ';
     const album = document.querySelector('input').value;
     const res = await fetch(`https://deathgrips-api.herokuapp.com/api/grips/${album}`);
+    //you may also use https://localhost:8000/api/grips/${album} for local host version. same shit
     const data = await res.json();
     console.log(data);
     document.querySelector('#rating').innerText += ' ' + data.rating;
